@@ -10,7 +10,7 @@ exports.getSaves = async () => {
 };
 
 exports.getSaveByEmail = async (autor) => {
-  return await Save.findOne({ autor });
+  return await Save.find({ autor });
 };
 
 exports.updateSave = async (id, saveData) => {
