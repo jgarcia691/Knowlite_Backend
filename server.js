@@ -1,4 +1,5 @@
 require('dotenv').config();
+import cors from 'cors';
 const express = require('express');
 const mongoose = require('./config/bd');
 const usersRouter = require('./src/users/routes');
@@ -7,6 +8,7 @@ const savesRouter = require('./src/saves/routes');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+app.use(cors());
 app.use(express.json());
 app.use('/users', usersRouter);
 app.use('/saves', savesRouter);
