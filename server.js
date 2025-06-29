@@ -1,9 +1,10 @@
 require('dotenv').config();
-import cors from 'cors';
+const cors = require('cors');
 const express = require('express');
 const mongoose = require('./config/bd');
 const usersRouter = require('./src/users/routes');
 const savesRouter = require('./src/saves/routes');
+const apiRouter = require('./src/API/routes');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -12,6 +13,7 @@ app.use(cors());
 app.use(express.json());
 app.use('/users', usersRouter);
 app.use('/saves', savesRouter);
+app.use('/api', apiRouter);
 
 mongoose.connection.once('open', () => {
   console.log('Conexión a la base de datos establecida');
