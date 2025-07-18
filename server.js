@@ -13,7 +13,7 @@ app.use(cors({
   origin: 'http://localhost:5173', // o usa '*' para permitir todos (solo para pruebas)
   credentials: true
 }));
-app.use(express.json());
+app.use(express.json({ limit: '50mb' }));
 app.use('/users', usersRouter);
 app.use('/books', booksRouter);
 app.use('/api', apiRouter);
