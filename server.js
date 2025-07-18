@@ -9,7 +9,10 @@ const apiRouter = require('./src/API/routes');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(cors());
+app.use(cors({
+  origin: 'http://localhost:5173', // o usa '*' para permitir todos (solo para pruebas)
+  credentials: true
+}));
 app.use(express.json());
 app.use('/users', usersRouter);
 app.use('/books', booksRouter);
