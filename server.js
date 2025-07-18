@@ -10,10 +10,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(cors({
-  origin: [
-    'http://localhost:5173',
-    'https://knowlite-git-temp-jose-garcias-projects-05f9301a.vercel.app'
-  ],
+  origin: '*',
   credentials: true
 }));
 app.use(express.json({ limit: '50mb' }));
