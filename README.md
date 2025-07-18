@@ -25,11 +25,6 @@ Knowlite_Backend/
 │   │   ├── model.js
 │   │   ├── routes.js
 │   │   └── service.js
-│   ├── saves/               # Módulo de saves
-│   │   ├── controller.js
-│   │   ├── model.js
-│   │   ├── routes.js
-│   │   └── service.js
 │   └── API/                 # Módulo de integración con Gemini
 │       ├── controller.js
 │       ├── model.js
@@ -70,7 +65,6 @@ Knowlite_Backend/
 
 ## 🌟 Funcionalidades Destacadas
 - **Gestión de usuarios:** registro, login, actualización y eliminación.
-- **Gestión de saves:** guardar, listar, buscar, actualizar y eliminar información personalizada.
 - **Análisis y resumen de textos:** endpoint `/api/resumir` que utiliza Gemini para analizar y resumir textos enviados desde el frontend.
 - **Despliegue en Vercel:** fácil de escalar y mantener.
 
@@ -81,11 +75,6 @@ Knowlite_Backend/
 - `POST   /users/login` — Login de usuario
 - `PUT    /users/:id` — Actualizar usuario
 - `DELETE /users/:id` — Eliminar usuario
-- `POST   /saves/` — Crear save
-- `GET    /saves/` — Listar saves
-- `GET    /saves/email/:autor` — Buscar saves por autor
-- `PUT    /saves/:id` — Actualizar save
-- `DELETE /saves/:id` — Eliminar save
 - `POST   /api/resumir` — Analizar y resumir texto usando Gemini
 
 ---
